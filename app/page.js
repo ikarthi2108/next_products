@@ -1,7 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 
-// Define loader component
+
 const Loader = () => (
   <div className="loader-container">
     <div className="loader"></div>
@@ -21,7 +21,7 @@ export default function ProductsPage() {
       } catch (error) {
         console.error('Error fetching data:', error);
       } finally {
-        setLoading(false); // Once data fetching is done, set loading to false
+        setLoading(false); 
       }
     };
 
@@ -31,7 +31,7 @@ export default function ProductsPage() {
   return (
     <div>
       <h1 className="text-3xl font-semibold text-center mb-8">Products</h1>
-      {loading ? ( // Conditionally render loader if loading state is true
+      {loading ? (
         <Loader />
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
